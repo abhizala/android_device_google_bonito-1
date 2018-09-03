@@ -853,6 +853,10 @@ KMGK_USE_QTI_SERVICE := true
 #Clear the variable
 TARGET_CHIPSET := ""
 
+# Enable missing props
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.opa.eligible_device=true
+
 # Early phase offset configuration for SurfaceFlinger
 #PRODUCT_PROPERTY_OVERRIDES += \
 #    debug.sf.early_phase_offset_ns=1500000
