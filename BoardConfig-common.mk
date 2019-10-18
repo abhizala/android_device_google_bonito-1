@@ -81,7 +81,8 @@ AB_OTA_PARTITIONS += \
     vbmeta \
     dtbo \
     product \
-    system_ext
+    system_ext \
+    vendor
 
 BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -103,6 +104,9 @@ BOARD_PERSISTIMAGE_FILE_SYSTEM_TYPE := ext4
 
 # boot.img
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x04000000
+
+# vendor.img
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 
 BOARD_SUPER_PARTITION_GROUPS := google_dynamic_partitions
 BOARD_GOOGLE_DYNAMIC_PARTITIONS_PARTITION_LIST := \
