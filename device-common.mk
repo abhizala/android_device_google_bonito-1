@@ -37,6 +37,10 @@ PRODUCT_PROPERTY_OVERRIDES += af.fast_track_multiplier=1
 PRODUCT_PROPERTY_OVERRIDES += debug.stagefright.ccodec=4
 PRODUCT_PROPERTY_OVERRIDES += debug.stagefright.omx_default_rank=512
 
+# Preopt SystemUI
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUI
+
 # Setting vendor SPL
 VENDOR_SECURITY_PATCH = $(PLATFORM_SECURITY_PATCH)
 
