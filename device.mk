@@ -854,14 +854,18 @@ KMGK_USE_QTI_SERVICE := true
 TARGET_CHIPSET := ""
 
 # Early phase offset configuration for SurfaceFlinger
-PRODUCT_PROPERTY_OVERRIDES += \
-    debug.sf.early_phase_offset_ns=1500000
-PRODUCT_PROPERTY_OVERRIDES += \
-    debug.sf.early_app_phase_offset_ns=1500000
-PRODUCT_PROPERTY_OVERRIDES += \
-    debug.sf.early_gl_phase_offset_ns=3000000
-PRODUCT_PROPERTY_OVERRIDES += \
-    debug.sf.early_gl_app_phase_offset_ns=15000000
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    debug.sf.early_phase_offset_ns=1500000
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    debug.sf.early_app_phase_offset_ns=1500000
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    debug.sf.early_gl_phase_offset_ns=3000000
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    debug.sf.early_gl_app_phase_offset_ns=15000000
+
+# Force triple frame buffers
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
 # Enable backpressure for GL comp
 PRODUCT_PROPERTY_OVERRIDES += \
