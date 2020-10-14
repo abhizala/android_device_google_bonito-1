@@ -38,6 +38,15 @@ TARGET_BOARD_COMMON_PATH := device/google/bonito/sdm710
 
 BUILD_BROKEN_DUP_RULES := true
 
+# Hack for sdm845 display on R+ which started erroring.
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+
+# Hack for Jelly on /product/
+DISABLE_ARTIFACT_PATH_REQUIREMENTS := true
+
+# Hack for our vendor repo for now
+BUILD_BROKEN_VINTF_PRODUCT_COPY_FILES := true
+
 BOARD_KERNEL_CMDLINE += console=ttyMSM0,115200n8 androidboot.console=ttyMSM0 printk.devkmsg=on
 BOARD_KERNEL_CMDLINE += msm_rtb.filter=0x237
 BOARD_KERNEL_CMDLINE += ehci-hcd.park=3
