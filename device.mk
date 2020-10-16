@@ -973,5 +973,18 @@ PRODUCT_PACKAGES += \
 # Gapps
 # $(call inherit-product, vendor/gapps/common/common-vendor.mk)
 
-# Microg
-$(call inherit-product, vendor/microg/microg-vendor.mk)
+# Microg with some decent defaults
+PRODUCT_PACKAGES += \
+    GmsCore \
+    MicroGGSFProxy \
+    FakeStore \
+    AuroraStore \
+    AuroraDroid \
+    AuroraServices \
+    GoogleMapsFramework \
+    AppleNLPBackend \
+    DejaVuLocationService \
+    LocalGSMNLPBackend \
+    LocalWiFiNLPBackend \
+    NominatimNlpBackend \
+    MozillaNlpBackend
