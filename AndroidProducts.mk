@@ -21,5 +21,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_sargo_hwasan.mk
 
 COMMON_LUNCH_CHOICES := \
+    aosp_bonito-user \
     aosp_bonito-userdebug \
+    aosp_sargo-user \
     aosp_sargo-userdebug
