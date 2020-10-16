@@ -43,6 +43,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
 
 $(call inherit-product, device/google/bonito/device-bonito.mk)
+$(call inherit-product-if-exists, vendor/google/bonito/bonito-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/bonito/proprietary/device-vendor.mk)
 
 PRODUCT_COPY_FILES += \
@@ -54,7 +55,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += com.android.vndk.current.on_vendor
 
 PRODUCT_MANUFACTURER := Google
-PRODUCT_BRAND := Android
+PRODUCT_BRAND := google
 PRODUCT_NAME := aosp_bonito
 PRODUCT_DEVICE := bonito
-PRODUCT_MODEL := AOSP on bonito
+PRODUCT_MODEL := Pixel 3a XL
+
+# Match stock product info
+PRODUCT_OVERRIDE_INFO := true
+PRODUCT_OVERRIDE_NAME := bonito
+PRODUCT_OVERRIDE_FINGERPRINT := google/bonito/bonito:11/RP1A.201005.004/6782484:user/release-keys
+PRODUCT_OVERRIDE_DESC := bonito-user 11 RP1A.201005.004 6782484 release-keys
