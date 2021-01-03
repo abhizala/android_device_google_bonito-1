@@ -990,3 +990,7 @@ $(call inherit-product, vendor/gapps/common/common-vendor.mk)
 #    LocalWiFiNLPBackend \
 #    NominatimNlpBackend \
 #    MozillaNlpBackend
+
+# Data (CAF)
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/qcom/opensource/dataservices
