@@ -972,9 +972,6 @@ PRODUCT_PACKAGES += \
     PresencePolling \
     RcsService
 
-# Gapps
-$(call inherit-product, vendor/gapps/common/common-vendor.mk)
-
 # Microg with some decent defaults
 #PRODUCT_PACKAGES += \
 #    GmsCore \
